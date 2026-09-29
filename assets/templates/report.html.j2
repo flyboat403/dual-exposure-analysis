@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__TITLE__ · __SCHOOL__</title>
+<style>
+:root{--ink:#1a1f24;--mut:#6b7580;--line:#e3e8ec;--bg:#fbfcfd;--acc:#2b5d8a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:16px/1.75 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+header{background:#fff;border-bottom:1px solid var(--line);padding:26px 34px 20px}
+main{max-width:1180px;margin:0 auto;padding:26px 34px 70px}
+h1{font-size:25px;margin:0 0 8px}
+h2{font-size:19px;margin:38px 0 12px;padding-bottom:7px;border-bottom:2px solid var(--acc)}
+.meta{color:var(--mut);font-size:13.5px;line-height:1.9}
+.meta b{color:#33414d}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;background:#fff}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top}
+th{background:#f2f6f9;font-weight:600;text-align:left}
+td.c{text-align:center;white-space:nowrap}
+.hl{color:#1a7f6b}
+.badge{display:inline-block;min-width:22px;padding:1px 7px;border-radius:4px;
+ font-size:12.5px;font-weight:600}
+.qⅠ{background:#fdece9;color:#b03a2e}.qⅡ{background:#f7e2e0;color:#8e1b12}
+.qⅢ{background:#e9f0f8;color:#2b5d8a}.qⅣ{background:#e8f5f1;color:#1a7f6b}
+figure{margin:20px 0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px}
+figure img{width:100%;height:auto;display:block;border-radius:4px}
+figcaption{font-size:13px;color:var(--mut);margin-top:9px;line-height:1.7}
+.callout{background:#fff;border-left:4px solid var(--acc);padding:13px 17px;margin:16px 0;
+ font-size:14.5px;border-radius:0 6px 6px 0}
+.callout.warn{border-left-color:#c0392b;background:#fff8f7}
+.kpi{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}
+.kpi div{flex:1 1 150px;background:#fff;border:1px solid var(--line);border-radius:8px;
+ padding:12px 15px}
+.kpi b{display:block;font-size:23px;color:var(--acc);line-height:1.35}
+.kpi span{font-size:12.5px;color:var(--mut)}
+code{background:#f0f3f6;padding:1px 5px;border-radius:3px;font-size:13px}
+footer{border-top:1px solid var(--line);margin-top:44px;padding-top:16px;
+ color:var(--mut);font-size:13px}
+</style>
+</head>
+<body>
+<header>
+<h1>__TITLE__</h1>
+<div class="meta">
+<b>学校</b>：__SCHOOL__<br>
+<b>横轴</b>：生成式人工智能（LLM）暴露度 —— <b>方法学源头</b>：张丹丹、于航、李力行等《中国人工智能技术暴露度的测算及其对劳动需求的影响——基于大语言模型的新证据》，《管理世界》2025 年第 7 期：59-72<br>
+<b>纵轴</b>：自动化替代暴露度 —— <b>口径依据</b>：魏宏冰、李贺、马弘《工业机器人与结构性就业变化：职业和任务的视角》，《世界经济》2025 年第 4 期：144-169；<b>含工业机器人与规则化业务系统两个成分</b><br>
+<b>数据</b>：__N_MAJOR__ 个专业 __TOTAL__ 条任务
+</div>
+</header>
+<main>
+
+<div class="kpi">
+<div><b>__TOTAL__</b><span>任务条目</span></div>
+<div><b>__N_SPAN__ / __N_MAJOR__</b><span>跨象限专业</span></div>
+<div><b>__N_FOUR__</b><span>四象限全跨专业</span></div>
+<div><b>__N_PENDING__</b><span>待定条目</span></div>
+</div>
+
+<div class="callout warn">
+<b>为什么图要在任务层画</b>：本方法的核心主张是"专业层的单一分数会掩盖专业内部的任务异质性"。
+因此本报告的图示<b>一律在任务层展开</b>——若在专业层作图，等于在图上复现所批评的做法。
+第 1 张图的左右两栏对照，就是这一主张的直接证据。
+</div>
+
+<h2>一、框架：两条轴、四个象限</h2>
+<p>两轴均取 <code>0.20 / 0.55 / 0.80</code> 三档，分界值 <code>0.50</code>。两轴交叉后得到四个象限：</p>
+<table>
+<thead><tr><th style="width:16%">象限</th><th style="width:28%">含义</th><th>典型任务</th></tr></thead>
+<tbody>
+<tr><td><span class="badge qⅠ">Ⅰ</span> 仅自动化高</td><td>常规手工或结构化流程任务</td><td>拆装、装配、焊接、搬运、缝纫、纸样制作</td></tr>
+<tr><td><span class="badge qⅡ">Ⅱ</span> 双高</td><td>规则化认知任务，两类技术同时构成压力</td><td>规则化业务系统操作、单证、核算、安检流程</td></tr>
+<tr><td><span class="badge qⅢ">Ⅲ</span> 仅生成式 AI 高</td><td>非常规认知任务</td><td>文案生成、设计表达、影音编辑、代码</td></tr>
+<tr><td><span class="badge qⅣ">Ⅳ</span> 双低</td><td>具身操作、面对面服务与需要现场判断的任务</td><td>面对面服务、现场手作、护理、造型</td></tr>
+</tbody></table>
+
+<h2>二、图 1：同一批数据在两种分析单位下的面貌</h2>
+<figure><img src="__FIG_CONTRAST__" alt="专业层与任务层对照">
+<figcaption>左：按专业取均值，各专业挤在坐标系中部——这是"专业层单一分数"的必然形态。
+右：按任务呈现，任务铺满四个象限——这是任务层的真实结构。
+<b>左图丢掉的，正是右图才看得见的结构。</b></figcaption>
+</figure>
+
+<h2>三、图 2：重点专业的任务结构</h2>
+__FIG_STRUCT__
+
+<h2>四、图 3：任务的象限分布（任务层）</h2>
+<figure><img src="__FIG_MATRIX__" alt="任务层分布矩阵">
+<figcaption>格内为任务编号（专业缩写＋序号），左上角为该格条数。两轴各三档，故矩阵为 3×3。</figcaption>
+</figure>
+<table>
+<thead><tr><th>象限</th><th>条数</th></tr></thead><tbody>
+<tr><td><span class="badge qⅠ">Ⅰ</span> 仅自动化高</td><td class="c">__C_I__</td></tr>
+<tr><td><span class="badge qⅡ">Ⅱ</span> 双高</td><td class="c">__C_II__</td></tr>
+<tr><td><span class="badge qⅢ">Ⅲ</span> 仅生成式 AI 高</td><td class="c">__C_III__</td></tr>
+<tr><td><span class="badge qⅣ">Ⅳ</span> 双低</td><td class="c">__C_IV__</td></tr>
+</tbody></table>
+
+<h2>五、专业落点</h2>
+<table>
+<thead><tr><th style="width:26%">专业</th><th style="width:14%">教育层次</th>
+<th style="width:10%">任务数</th><th style="width:20%">跨象限</th><th>象限分布</th></tr></thead>
+<tbody>
+__MAJOR_ROWS__
+</tbody></table>
+<div class="callout">
+<b>读法</b>：<b>跨象限</b>列显示该专业内部的任务落在几个象限。落在 2 个及以上，就说明
+"把专业当作单一风险单元"这一前提不成立——专业内部的调整方向并不一致。
+若某专业<b>四象限全跨</b>，则它在任何单一维度上的排序都无法指导调整。
+</div>
+
+<h2>六、图 4：分析单位从专业下移到任务</h2>
+<figure><img src="__FIG_SHIFT__" alt="分析单位下移">
+<figcaption>现行做法把专业当作风险单元，只能回答"调不调"；分析单位下移到任务后，
+输出变为任务结构图，可以回答"调什么、怎么调"。</figcaption>
+</figure>
+
+<h2>七、局限</h2>
+<ul>
+<li><b>案例规模小</b>：本报告用于演示框架可行性，<b>不作为统计推断</b>。</li>
+<li><b>拆解规则由工具预设</b>：能力条目到任务的映射含判断；标有"需再拆"的条目须人工复核。</li>
+<li><b>两侧口径不同</b>：横轴是暴露度（匹配程度），纵轴是自动化可及性（规则化程度），二者都不是"就业会减少多少"。</li>
+<li><b>纵轴为宽口径</b>：含工业机器人与规则化业务系统两个成分。若窄化为工业机器人，规则化软件风险会被误判为低暴露。</li>
+<li><b>O*NET 是美国职业数据</b>：与中国岗位群存在对应误差；专业到职业的权重分配含主观判断。</li>
+<li><b>两轴的文献出处不是数据来源</b>：横轴的方法学源头为张丹丹等（2025），纵轴的口径依据为魏宏冰等（2025）；<b>本报告不含这两篇的任何数值</b>，其数值（职业层暴露指数、替代概率、就业效应）均不可与本报告的暴露度分档直接比较。</li>
+<li><b>象限分界 0.50 为人为设定</b>，未做阈值检验。</li>
+</ul>
+
+<footer>
+数据来源：教育部《职业教育专业教学标准》公开文本；O*NET 职业数据库
+（U.S. Department of Labor, Employment and Training Administration，CC BY 4.0）；
+中国职业分类大典（2022 年版，人力资源社会保障部）。<br>
+方法学源头（非数据来源）：张丹丹等《管理世界》2025 年第 7 期（横轴）；
+魏宏冰等《世界经济》2025 年第 4 期（纵轴口径）。<br>
+本报告由 <code>dual-exposure-analysis</code> 技能生成。
+</footer>
+</main>
+</body>
+</html>

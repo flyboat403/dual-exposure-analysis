@@ -1,0 +1,105 @@
+{
+ "_note": "样例映射：三个专业 → O*NET 职业。值取自一次已核验的真实映射。china_code 回《中华人民共和国职业分类大典（2022 年版）》核对；当「职业面向」列出的岗位并非大典职业时，china_code 记「—」，china_name 写明岗位名，并在 note 中说明。",
+ "汽车运用与维修": {
+  "code": "700206",
+  "level": "中等职业教育",
+  "facing": "面向汽车机电维修、汽车维修接待等岗位（群）。",
+  "targets": [
+   {
+    "china_code": "4-12-01-01",
+    "china_name": "汽车维修工",
+    "onet_code": "49-3023.00",
+    "onet_name": "Automotive Service Technicians and Mechanics",
+    "mapping_confidence": "high",
+    "weight": 0.6,
+    "note": "汽车机电维修。能力要求含发动机总成拆装检测、发动机控制系统检修、底盘及控制系统检修、车身电气设备检修，与大典「汽车维修工」的主要工作任务（发动机、底盘、车身、电气等总成的检查调整更换与修理）一致。"
+   },
+   {
+    "china_code": "4-12-01-01",
+    "china_name": "汽车维修工（工种：汽车车身整形修复工）",
+    "onet_code": "49-3021.00",
+    "onet_name": "Automotive Body and Related Repairers",
+    "mapping_confidence": "medium",
+    "weight": 0.2,
+    "note": "车身修复。大典中「汽车车身整形修复工」是汽车维修工下设工种，故与大典职业同码。能力要求含车身电气设备拆装检测与修理，偏向车身相关作业。"
+   },
+   {
+    "china_code": "—",
+    "china_name": "汽车维修接待（岗位，非大典职业）",
+    "onet_code": "53-6031.00",
+    "onet_name": "Automotive and Watercraft Service Attendants",
+    "mapping_confidence": "low",
+    "weight": 0.2,
+    "note": "职业面向明列「汽车维修接待」。该岗位在《职业分类大典》中无独立职业条目，属服务接待类岗位，故取 O*NET 中对应的汽车服务人员；权重按职业面向的列举顺序估为 0.2，置信度低，建议由教研组核定。"
+   }
+  ]
+ },
+ "服装设计与工艺": {
+  "code": "680402",
+  "level": "中等职业教育",
+  "facing": "面向服装设计助理等职业，服装设计、服装制版、服装工艺、服装跟单、服装 CAD操作、数码服装设计、服装样衣制作、服装营销等岗位（群）。",
+  "targets": [
+   {
+    "china_code": "4-10-02-01",
+    "china_name": "裁缝",
+    "onet_code": "51-6052.00",
+    "onet_name": "Tailors, Dressmakers, and Custom Sewers",
+    "mapping_confidence": "high",
+    "weight": 0.4,
+    "note": "服装制版与样衣制作。大典「裁缝」的主要工作任务为「绘制或推荐设计效果图、款式图；测量记录人体尺寸；制作服装样板、裁剪面料、缝制成衣；试衣调整定型熨烫」，与本专业制版、工艺、样衣岗位群直接对应。"
+   },
+   {
+    "china_code": "6-05-01-03",
+    "china_name": "缝纫工",
+    "onet_code": "51-6031.00",
+    "onet_name": "Sewing Machine Operators",
+    "mapping_confidence": "high",
+    "weight": 0.3,
+    "note": "服装工艺。能力要求含「操作常用服装缝纫设备、基本维护和保养常用服装缝纫设备」，对应大典「缝纫工」。注意该岗位在 O*NET 中自动化可及性偏高（第 73.8 百分位），与制版、设计岗位差异大。"
+   },
+   {
+    "china_code": "2-09-06-02",
+    "china_name": "服装设计人员",
+    "onet_code": "27-1022.00",
+    "onet_name": "Fashion Designers",
+    "mapping_confidence": "high",
+    "weight": 0.3,
+    "note": "服装设计助理。职业面向首句即「面向服装设计助理等职业」；能力要求含「整合服装款式、色彩、材料等多重要素」「服装造型设计与款式绘制表达」「服装结构设计」，对应大典「服装设计人员」。该岗位在 O*NET 中自动化可及性极低（第 9.9 百分位）。"
+   }
+  ]
+ },
+ "航空服务": {
+  "code": "700402",
+  "level": "中等职业教育",
+  "facing": "面向民航乘务员、民航安全检查员、民航客运员等职业，民航乘务、民航安检、空港旅客服务等岗位（群）。",
+  "targets": [
+   {
+    "china_code": "4-02-04-01",
+    "china_name": "民航乘务员",
+    "onet_code": "53-2031.00",
+    "onet_name": "Flight Attendants",
+    "mapping_confidence": "high",
+    "weight": 0.5,
+    "note": "职业面向首列「民航乘务员」，与大典同码。能力要求含「按工作流程和服务程序进行机上旅客服务」「按照民航服务岗位的仪容仪表和言谈举止要求服务旅客」。"
+   },
+   {
+    "china_code": "4-07-05-02",
+    "china_name": "安检员（工种：民航安全检查员）",
+    "onet_code": "33-9093.00",
+    "onet_name": "Transportation Security Screeners",
+    "mapping_confidence": "high",
+    "weight": 0.3,
+    "note": "职业面向明列「民航安全检查员」。大典中「民航安全检查员」是「安检员」下设工种，故与大典职业同码。能力要求含「通过对旅客和行李进行检查，迅速准确查出可能携带的违禁物品」。"
+   },
+   {
+    "china_code": "4-02-04-02",
+    "china_name": "航空运输地面服务员（工种：民航客运员）",
+    "onet_code": "43-4181.00",
+    "onet_name": "Reservation and Transportation Ticket Agents and Travel Clerks",
+    "mapping_confidence": "high",
+    "weight": 0.2,
+    "note": "职业面向明列「民航客运员」。大典中「民航客运员」是「航空运输地面服务员」下设工种。能力要求含「熟练使用离港系统为旅客办理乘机登记和登机口服务」「为进港旅客提供行李发放服务和不正常行李运输查询服务」。注意该岗位的自动化可及性达第 87.5 百分位，且常规认知分量（65.0）明显高于常规手工分量（57.0）——其风险来自规则化业务系统而非工业机器人。"
+   }
+  ]
+ }
+}
